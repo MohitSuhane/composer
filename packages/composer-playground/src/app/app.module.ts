@@ -25,7 +25,7 @@ import { VersionCheckComponent } from './version-check';
 import { FooterComponent } from './footer';
 import { ServicesModule } from './services/services.module';
 import { DrawerModule } from './common/drawer';
-import { HomeComponent } from './home/home.component';
+
 import AuthHelper from './helpers/auth.helper'
 
 let actionBasedIcons = require.context('../assets/svg/action-based', false, /.*\.svg$/);
@@ -63,8 +63,7 @@ type StoreType = {
         AppComponent,
         NoContentComponent,
         VersionCheckComponent,
-        WelcomeComponent,
-        HomeComponent
+        WelcomeComponent
     ],
     imports: [ // import Angular's modules
         AppRoutingModule,
@@ -85,7 +84,7 @@ type StoreType = {
         APP_PROVIDERS,
         ActivateGuard,
         AuthHelper,
-        {provide: APP_BASE_HREF, useValue: '/'},
+        {provide: APP_BASE_HREF, useValue: '/playground'},
     ]
 })
 export class AppModule {

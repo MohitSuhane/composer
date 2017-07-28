@@ -55,9 +55,15 @@ UserAuthRoute(app, passport); // Set up the passport authentication
 // Route api
 // Default - Route WildCard
 // Composer Playground landing page
-app.get('*', function(req, res) {
+
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '../dist/home.html'));
+}); 
+
+app.get('/playground', function(req, res) {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 }); 
+
 
 // Start Server
 app.listen(config.port, 'localhost', function(err) {

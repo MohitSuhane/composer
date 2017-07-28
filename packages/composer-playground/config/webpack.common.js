@@ -276,7 +276,8 @@ module.exports = function (options) {
       new CopyWebpackPlugin([
         { from: 'src/assets', to: 'assets' },
         { from: 'src/meta' },
-        { from: 'src/config' }
+        { from: 'src/config' },
+        { from: 'src/home.html'}
       ]),
 
 
@@ -289,7 +290,7 @@ module.exports = function (options) {
        * See: https://github.com/ampedandwired/html-webpack-plugin
        */
       new HtmlWebpackPlugin({
-        template: 'src/index.html',
+        template: 'src/home.html',
         title: METADATA.title,
         chunksSortMode: 'dependency',
         metadata: METADATA,
