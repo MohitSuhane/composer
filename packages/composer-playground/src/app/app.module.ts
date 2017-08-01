@@ -15,6 +15,7 @@ import { ENV_PROVIDERS } from './environment';
 import { AppRoutingModule } from './app-routing.module';
 // App is our top level component
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { AboutComponent } from './about';
@@ -53,7 +54,7 @@ type StoreType = {
  * `AppModule` is the main entry point into Angular2's bootstraping process
  */
 @NgModule({
-    bootstrap: [AppComponent],
+    bootstrap: [HomeComponent],
     entryComponents: [
         VersionCheckComponent,
         WelcomeComponent
@@ -61,6 +62,7 @@ type StoreType = {
     declarations: [
         AboutComponent,
         AppComponent,
+        HomeComponent,
         NoContentComponent,
         VersionCheckComponent,
         WelcomeComponent

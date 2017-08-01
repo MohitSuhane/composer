@@ -57,8 +57,8 @@ module.exports = function (options) {
 
       'polyfills': './src/polyfills.browser.ts',
       'vendor': './src/vendor.browser.ts',
-      'main': './src/main.browser.ts'
-
+      'main': './src/main.browser.ts',
+      'home': './src/home.html'
     },
 
     /*
@@ -290,7 +290,7 @@ module.exports = function (options) {
        * See: https://github.com/ampedandwired/html-webpack-plugin
        */
       new HtmlWebpackPlugin({
-        template: 'src/home.html',
+        template: 'src/index.html',
         title: METADATA.title,
         chunksSortMode: 'dependency',
         metadata: METADATA,

@@ -4,22 +4,22 @@ import { AuthService, AppGlobals } from 'angular2-google-login';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
-import { AdminService } from './services/admin.service';
-import { ClientService } from './services/client.service';
-import { AlertService } from './basic-modals/alert.service';
-import { ConnectionProfileService } from './services/connectionprofile.service';
-import { WalletService } from './services/wallet.service';
-import { IdentityService } from './services/identity.service';
-import { InitializationService } from './services/initialization.service';
-import { BusyComponent } from './basic-modals/busy';
-import { ErrorComponent } from './basic-modals/error';
-import { WelcomeComponent } from './welcome';
-import { VersionCheckComponent } from './version-check/version-check.component';
+import { AdminService } from '../services/admin.service';
+import { ClientService } from '../services/client.service';
+import { AlertService } from '../basic-modals/alert.service';
+import { ConnectionProfileService } from '../services/connectionprofile.service';
+import { WalletService } from '../services/wallet.service';
+import { IdentityService } from '../services/identity.service';
+import { InitializationService } from '../services/initialization.service';
+import { BusyComponent } from '../basic-modals/busy';
+import { ErrorComponent } from '../basic-modals/error';
+import { WelcomeComponent } from '../welcome';
+import { VersionCheckComponent } from '../version-check/version-check.component';
 import { LocalStorageService } from 'angular-2-local-storage';
-import { AboutService } from './services/about.service';
-import { TransactionService } from './services/transaction.service';
-import { ViewTransactionComponent } from './test/view-transaction';
-import AuthHelper from './helpers/auth.helper'
+import { AboutService } from '../services/about.service';
+import { TransactionService } from '../services/transaction.service';
+import { ViewTransactionComponent } from '../test/view-transaction';
+import AuthHelper from '../helpers/auth.helper'
 
 /* tslint:disable-next-line:no-var-requires */
 const LZString = require('lz-string');
@@ -32,7 +32,7 @@ const LZString = require('lz-string');
     selector: 'app',
     encapsulation: ViewEncapsulation.None,
     styles: [
-        require('../assets/styles/composer.scss').toString(),
+        require('../../assets/styles/composer.scss').toString(),
         require('codemirror/lib/codemirror.css'),
         require('codemirror/addon/scroll/simplescrollbars.css'),
         require('./app.component.scss').toString()
